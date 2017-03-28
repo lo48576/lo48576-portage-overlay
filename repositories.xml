@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>lo48576</name>
+		<description>Personal overlay of @lo48576.</description>
+        <homepage>https://github.com/lo48576/lo48576-portage-overlay</homepage>
+		<owner>
+			<email>tashioka.256@gmail.com</email>
+		</owner>
+		<source type="git">https://github.com/lo48576/lo48576-portage-overlay.git</source>
+	</repo>
+</repositories>
