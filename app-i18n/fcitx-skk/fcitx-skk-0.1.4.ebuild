@@ -7,7 +7,7 @@ inherit cmake-utils gnome2-utils
 
 DESCRIPTION="An input method engine for Fcitx"
 HOMEPAGE="https://github.com/fcitx/fcitx-skk"
-SRC_URI="https://github.com/fcitx/fcitx-skk/archive/0.1.4.tar.gz"
+SRC_URI="https://github.com/fcitx/fcitx-skk/archive/${PV}.tar.gz -> fcitx-skk-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
