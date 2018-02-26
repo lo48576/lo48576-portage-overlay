@@ -24,7 +24,7 @@ RDEPEND="
 	media-libs/glew
 	media-libs/libsdl2
 	media-libs/opusfile
-	media-libs/sdl2-image"
+	media-libs/sdl2-gfx"
 
 pkg_postinst() {
 	xdg_desktop_database_update
