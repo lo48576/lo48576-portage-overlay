@@ -55,7 +55,7 @@ winapi-build-0.1.1
 inherit cargo
 
 DESCRIPTION="Counts things in unicode text files"
-HOMEPAGE=""
+HOMEPAGE="https://github.com/dead10ck/uwc"
 SRC_URI="$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="MPL-2.0"
