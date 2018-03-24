@@ -8,7 +8,7 @@ EAPI=6
 CRATES="
 bitflags-1.0.1
 cfg-if-0.1.2
-clap-2.30.0
+clap-2.31.2
 error-chain-0.11.0
 fern-0.5.4
 float-cmp-0.3.0
@@ -16,12 +16,12 @@ log-0.4.1
 num-0.1.42
 num-integer-0.1.36
 num-iter-0.1.35
-num-traits-0.2.0
+num-traits-0.2.2
 phf-0.7.21
 phf_shared-0.7.21
 simplecss-0.1.0
 siphasher-0.2.2
-svgcleaner-0.9.3
+svgcleaner-0.9.4
 svgdom-0.10.4
 svgparser-0.6.4
 textwrap-0.9.0
