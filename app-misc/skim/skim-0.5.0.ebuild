@@ -26,7 +26,7 @@ redox_termios-0.1.1
 regex-0.2.3
 regex-syntax-0.4.1
 shlex-0.1.1
-skim-0.4.0
+skim-0.5.0
 strsim-0.6.0
 termion-1.5.1
 textwrap-0.9.0
