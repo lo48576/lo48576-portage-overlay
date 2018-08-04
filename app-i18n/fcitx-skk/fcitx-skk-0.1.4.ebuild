@@ -18,6 +18,7 @@ DEPEND=">=app-i18n/fcitx-4.2.8
 	app-i18n/libskk
 	app-i18n/skk-jisyo
 	qt5? (
+		app-i18n/fcitx-qt5:4
 		dev-qt/qtcore:5
 		dev-qt/qtgui:5=
 		dev-qt/qtwidgets:5
