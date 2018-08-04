@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit ltprune vala virtualx
+inherit autotools ltprune vala virtualx
 
 DESCRIPTION="GObject-based library to deal with Japanese kana-to-kanji conversion method"
 HOMEPAGE="https://github.com/ueno/libskk"
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	vala_src_prepare
+	eautoreconf
 	default
 }
 
