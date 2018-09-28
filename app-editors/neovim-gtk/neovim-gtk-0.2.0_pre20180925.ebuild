@@ -86,6 +86,7 @@ winapi-0.3.5
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-x86_64-pc-windows-gnu-0.4.0
 wincolor-1.0.0
+winres-0.1.6
 "
 
 inherit cargo eapi7-ver git-r3 gnome2-utils
@@ -111,6 +112,12 @@ src_test() {
 src_unpack() {
 	git-r3_src_unpack
 	cargo_src_unpack
+}
+
+src_compile() {
+	cargo_src_compile
+	sed -i "s|Exec=nvim-gtk|Exec=${EPREFIX}/usr/bin/nvim-gtk|" desktop/org.daa.NeovimGtk.desktop \
+		|| die "desktop/org.daa.NeovimGtk.desktop is failed"
 }
 
 src_install() {
