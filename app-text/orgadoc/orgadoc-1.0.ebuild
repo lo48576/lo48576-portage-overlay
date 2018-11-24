@@ -31,7 +31,6 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README
 
-	mv docs/orgadoc.man docs/orgadoc.1
-	mv docs/orgadoc-init-readme.man docs/orgadoc-init-readme.1
-	doman docs/orgadoc.1 docs/orgadoc-init-readme.1
+	newman docs/orgadoc.man orgadoc.1
+	newman docs/orgadoc-init-readme.man orgadoc-init-readme.1
 }
