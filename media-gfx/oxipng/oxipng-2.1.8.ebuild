@@ -9,7 +9,7 @@ CRATES="
 adler32-0.2.0
 adler32-1.0.3
 ansi_term-0.11.0
-arrayvec-0.4.7
+arrayvec-0.4.8
 atty-0.2.11
 bit-vec-0.5.0
 bitflags-1.0.4
@@ -19,6 +19,7 @@ byteorder-1.2.7
 cc-1.0.25
 cfg-if-0.1.6
 clap-2.32.0
+cloudflare-zlib-0.2.1
 cloudflare-zlib-sys-0.2.0
 crc-1.8.1
 crossbeam-deque-0.2.0
@@ -29,9 +30,9 @@ either-1.5.0
 glob-0.2.11
 image-0.20.1
 inflate-0.4.3
-itertools-0.7.9
+itertools-0.7.11
 lazy_static-1.2.0
-libc-0.2.43
+libc-0.2.44
 lzw-0.10.0
 memoffset-0.2.1
 miniz_oxide-0.2.0
@@ -41,12 +42,13 @@ num-iter-0.1.37
 num-rational-0.2.1
 num-traits-0.2.6
 num_cpus-1.8.0
-oxipng-2.1.6
+oxipng-2.1.8
 png-0.12.0
 rayon-1.0.3
 rayon-core-1.4.1
-redox_syscall-0.1.42
+redox_syscall-0.1.43
 redox_termios-0.1.1
+rgb-0.8.11
 scopeguard-0.3.3
 strsim-0.7.0
 termion-1.5.1
