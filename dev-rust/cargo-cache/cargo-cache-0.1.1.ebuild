@@ -179,7 +179,5 @@ DEPEND=">=virtual/rust-1.31.0"
 RDEPEND=""
 
 src_install() {
-	cargo install --path . -j $(makeopts_jobs) --root="${D}/usr" $(usex debug --debug "") \
-		|| die "cargo install failed"
-	rm -f "${D}/usr/.crates.toml"
+	cargo_src_install --path .
 }
