@@ -4,37 +4,67 @@
 EAPI=7
 
 CRATES="
-aho-corasick-0.6.4
-ansi_term-0.10.2
-atty-0.2.3
-bitflags-1.0.1
-cc-1.0.17
-cfg-if-0.1.3
-clap-2.28.0
+aho-corasick-0.6.10
+ansi_term-0.11.0
+arrayvec-0.4.10
+atty-0.2.11
+bitflags-1.0.4
+byteorder-1.3.1
+cc-1.0.31
+cfg-if-0.1.7
+clap-2.32.0
+crossbeam-deque-0.2.0
+crossbeam-epoch-0.3.1
+crossbeam-utils-0.2.2
+darling-0.8.6
+darling_core-0.8.6
+darling_macro-0.8.6
+derive_builder-0.7.1
+derive_builder_core-0.4.1
+either-1.5.1
 env_logger-0.4.3
-kernel32-sys-0.2.2
+fnv-1.0.6
+fuzzy-matcher-0.2.1
+ident_case-1.0.1
 lazy_static-0.2.11
-libc-0.2.42
-log-0.3.8
-memchr-2.0.1
+lazy_static-1.3.0
+libc-0.2.50
+log-0.3.9
+log-0.4.6
+memchr-2.2.0
+memoffset-0.2.1
 nix-0.11.0
-redox_syscall-0.1.32
+nodrop-0.1.13
+num_cpus-1.10.0
+proc-macro2-0.4.27
+quote-0.6.11
+rayon-1.0.3
+rayon-core-1.4.1
+redox_syscall-0.1.51
 redox_termios-0.1.1
-regex-0.2.3
-regex-syntax-0.4.1
+regex-0.2.11
+regex-syntax-0.5.6
+scopeguard-0.3.3
 shlex-0.1.1
-strsim-0.6.0
+strsim-0.7.0
+syn-0.15.29
+term-0.5.1
 termion-1.5.1
-textwrap-0.9.0
-thread_local-0.3.4
-time-0.1.38
-unicode-width-0.1.4
-unreachable-1.0.0
-utf8-ranges-1.0.0
-vec_map-0.8.0
+textwrap-0.10.0
+thread_local-0.3.6
+time-0.1.42
+tuikit-0.2.4
+ucd-util-0.1.3
+unicode-width-0.1.5
+unicode-xid-0.1.0
+utf8-ranges-1.0.2
+utf8parse-0.1.1
+vec_map-0.8.1
 void-1.0.2
-winapi-0.2.8
-winapi-build-0.1.1
+vte-0.3.3
+winapi-0.3.6
+winapi-i686-pc-windows-gnu-0.4.0
+winapi-x86_64-pc-windows-gnu-0.4.0
 "
 
 inherit cargo
@@ -49,7 +79,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="tmux vim"
 
-DEPEND="virtual/rust"
 RDEPEND="
 	tmux? ( app-misc/tmux )
 	vim? ( || ( app-editors/vim app-editors/gvim app-editors/neovim ) )
@@ -58,8 +87,12 @@ RDEPEND="
 QA_FLAGS_IGNORED="usr/bin/sk"
 
 src_install() {
+	# prevent cargo_src_install() blowing up on man installation
+	mv man manpages || die
+
 	cargo_src_install --path=.
 	dodoc CHANGELOG.md README.md
+	doman manpages/man1/*
 
 	use tmux && dobin bin/sk-tmux
 
