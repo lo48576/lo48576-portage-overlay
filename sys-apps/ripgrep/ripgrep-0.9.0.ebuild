@@ -33,7 +33,6 @@ redox_termios-0.1.1
 regex-1.0.2
 regex-syntax-0.6.2
 remove_dir_all-0.5.1
-ripgrep-0.9.0
 same-file-1.0.2
 simd-0.2.2
 strsim-0.7.0

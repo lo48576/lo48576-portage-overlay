@@ -21,7 +21,6 @@ phf-0.7.21
 phf_shared-0.7.21
 simplecss-0.1.0
 siphasher-0.2.2
-svgcleaner-0.9.4
 svgdom-0.10.4
 svgparser-0.6.4
 textwrap-0.9.0

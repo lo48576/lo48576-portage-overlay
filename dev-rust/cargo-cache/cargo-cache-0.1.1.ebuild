@@ -18,7 +18,6 @@ bitflags-1.0.4
 build_const-0.2.1
 bytesize-1.0.0
 cargo-0.32.0
-cargo-cache-0.1.1
 cc-1.0.28
 cfg-if-0.1.6
 clap-2.32.0

@@ -10,7 +10,6 @@ ansi_term-0.11.0
 atty-0.2.11
 bitflags-1.0.4
 clap-2.32.0
-hexyl-0.3.1
 kernel32-sys-0.2.2
 libc-0.2.46
 redox_syscall-0.1.50

@@ -87,7 +87,6 @@ sha2-0.7.1
 shell32-sys-0.1.2
 strsim-0.7.0
 syn-0.15.6
-tectonic-0.1.10
 tectonic_xdv-0.1.8
 tempdir-0.3.7
 tempfile-3.0.4

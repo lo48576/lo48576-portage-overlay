@@ -59,7 +59,6 @@ redox_termios-0.1.1
 regex-1.0.5
 regex-syntax-0.6.2
 remove_dir_all-0.5.1
-ripgrep-0.10.0
 ryu-0.2.6
 safemem-0.2.0
 same-file-1.0.3

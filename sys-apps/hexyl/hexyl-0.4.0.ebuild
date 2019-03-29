@@ -13,7 +13,6 @@ cc-1.0.28
 cfg-if-0.1.6
 clap-2.32.0
 ctrlc-3.1.1
-hexyl-0.4.0
 kernel32-sys-0.2.2
 libc-0.2.46
 nix-0.11.0

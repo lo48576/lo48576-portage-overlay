@@ -40,7 +40,6 @@ num-iter-0.1.37
 num-rational-0.2.1
 num-traits-0.2.6
 num_cpus-1.9.0
-oxipng-2.2.0
 png-0.14.0
 rayon-1.0.3
 rayon-core-1.4.1

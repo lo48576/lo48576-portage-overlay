@@ -68,7 +68,6 @@ maplit-1.0.1
 markup5ever-0.3.2
 markup5ever-0.7.3
 matches-0.1.8
-mdbook-0.2.3
 memchr-2.1.0
 mime-0.2.6
 mime_guess-1.8.6
@@ -195,7 +194,8 @@ inherit cargo
 
 DESCRIPTION="Create books from markdown files"
 HOMEPAGE="https://github.com/rust-lang-nursery/mdBook"
-SRC_URI="$(cargo_crate_uris ${CRATES})"
+SRC_URI="https://github.com/rust-lang-nursery/mdBook/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="MPL-2.0"
 SLOT="0"
