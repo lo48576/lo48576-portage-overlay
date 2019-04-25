@@ -205,6 +205,12 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
+src_prepare() {
+	eapply_user
+
+	mv ../mdBook-${PV}/{.,}* .
+}
+
 src_install() {
 	cargo_src_install
 
