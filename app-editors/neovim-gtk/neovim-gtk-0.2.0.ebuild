@@ -17,6 +17,7 @@ backtrace-0.3.14
 backtrace-sys-0.1.28
 bitflags-1.0.4
 blake2-rfc-0.2.18
+build-version-0.1.1
 byteorder-1.3.1
 cairo-rs-0.5.0
 cairo-sys-rs-0.7.0
@@ -116,13 +117,12 @@ wincolor-1.0.1
 winres-0.1.8
 "
 
-inherit cargo eapi7-ver git-r3 gnome2-utils
+inherit cargo
 
 DESCRIPTION="GTK UI for neovim"
 HOMEPAGE="https://github.com/daa84/neovim-gtk"
-SRC_URI="$(cargo_crate_uris ${CRATES})"
-EGIT_REPO_URI="https://github.com/daa84/neovim-gtk.git"
-EGIT_COMMIT_DATE="$(ver_cut 5 ${PV})"
+SRC_URI="https://github.com/daa84/neovim-gtk/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
@@ -136,11 +136,6 @@ src_test() {
 	cargo test || die "tests failed"
 }
 
-src_unpack() {
-	git-r3_src_unpack
-	cargo_src_unpack
-}
-
 src_compile() {
 	cargo_src_compile
 	sed -i "s|Exec=nvim-gtk|Exec=${EPREFIX}/usr/bin/nvim-gtk|" desktop/org.daa.NeovimGtk.desktop \
@@ -149,7 +144,7 @@ src_compile() {
 
 src_install() {
 	emake PREFIX=${ED}usr install-resources
-	cargo_src_install
+	cargo_src_install --path .
 }
 
 pkg_postinst() {
