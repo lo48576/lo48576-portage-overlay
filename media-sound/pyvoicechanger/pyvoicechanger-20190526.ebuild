@@ -23,5 +23,6 @@ PATCHES=( "${FILESDIR}"/${PV}-fix-setup-py-parent-path.patch )
 CONFIG_CHECK="SND_ALOOP"
 
 RDEPEND="${PYTHON_DEPS}
-	dev-python/PyQt5[gui,widgets]"
+	dev-python/PyQt5[gui,widgets]
+	media-sound/sox"
 DEPEND="${RDEPEND}"
