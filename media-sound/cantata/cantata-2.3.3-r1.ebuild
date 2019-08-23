@@ -1,18 +1,18 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 PLOCALES="cs da de en_GB es fr hu it ja ko pl pt_BR ru zh_CN"
-inherit cmake-utils gnome2-utils l10n qmake-utils xdg-utils
+inherit cmake-utils gnome2-utils l10n qmake-utils xdg
 
 DESCRIPTION="Featureful and configurable Qt client for the music player daemon (MPD)"
 HOMEPAGE="https://github.com/CDrummond/cantata"
-SRC_URI="https://github.com/CDrummond/cantata/releases/download/v${PV}/${P}.tar.bz2"
+SRC_URI="https://github.com/CDrummond/${PN}/releases/download/v${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc64 x86"
 IUSE="cdda cddb cdio http-server libav mtp musicbrainz replaygain streaming taglib udisks zeroconf"
 REQUIRED_USE="
 	?? ( cdda cdio )
@@ -24,6 +24,9 @@ REQUIRED_USE="
 	replaygain? ( taglib )
 "
 
+BDEPEND="
+	dev-qt/linguist-tools:5
+"
 COMMON_DEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
@@ -33,7 +36,6 @@ COMMON_DEPEND="
 	dev-qt/qtsvg:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtxml:5
-	|| ( kde-frameworks/breeze-icons:5 kde-frameworks/oxygen-icons:* )
 	sys-libs/zlib
 	virtual/libudev:=
 	cdda? ( media-sound/cdparanoia )
@@ -56,10 +58,10 @@ COMMON_DEPEND="
 "
 RDEPEND="${COMMON_DEPEND}
 	dev-lang/perl[ithreads]
+	|| ( kde-frameworks/breeze-icons:5 kde-frameworks/oxygen-icons:* )
 "
 DEPEND="${COMMON_DEPEND}
 	dev-qt/qtconcurrent:5
-	dev-qt/linguist-tools:5
 "
 
 # cantata has no tests
@@ -67,6 +69,7 @@ RESTRICT="test"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2.2.0-headers.patch"
+	"${FILESDIR}/${P}-solidlite-static.patch" # bug 678228
 )
 
 src_prepare() {
@@ -108,7 +111,7 @@ src_configure() {
 
 pkg_postinst() {
 	gnome2_icon_cache_update
-	xdg_desktop_database_update
+	xdg_pkg_postinst
 
 	has_version media-sound/mpd || \
 		elog "An instance of media-sound/mpd, local or remote, is required to set up Cantata."
@@ -121,5 +124,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_icon_cache_update
-	xdg_desktop_database_update
+	xdg_pkg_postrm
 }
