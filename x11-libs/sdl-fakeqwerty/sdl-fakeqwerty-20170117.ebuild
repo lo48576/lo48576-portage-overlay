@@ -41,7 +41,7 @@ fakeqwerty_target() {
 src_prepare() {
 	default
 
-	cp -f "${FILESDIR}/Makefile" "${S}/" || die
+	cp -f "${FILESDIR}/Makefile-${PV}" "${S}/Makefile" || die
 	multilib_copy_sources
 }
 
