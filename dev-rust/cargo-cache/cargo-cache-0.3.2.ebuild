@@ -96,5 +96,5 @@ DEPEND=">=virtual/rust-1.31.0"
 RDEPEND=""
 
 src_install() {
-	cargo_src_install --path .
+	cargo_src_install
 }

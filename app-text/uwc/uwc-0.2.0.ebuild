@@ -84,7 +84,7 @@ DEPEND=""
 RDEPEND=""
 
 src_install() {
-	cargo_src_install --path .
+	cargo_src_install
 
 	dodoc README.md
 }

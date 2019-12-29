@@ -144,7 +144,7 @@ src_compile() {
 
 src_install() {
 	emake PREFIX=${ED}usr install-resources
-	cargo_src_install --path .
+	cargo_src_install
 }
 
 pkg_postinst() {

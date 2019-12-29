@@ -350,7 +350,7 @@ src_prepare() {
 }
 
 src_install() {
-	cargo_src_install --path=alacritty --offline
+	CARGO_INSTALL_PATH="alacritty" cargo_src_install
 
 	if use bash-completion ; then
 		newbashcomp extra/completions/alacritty.bash alacritty
