@@ -7,12 +7,12 @@ inherit autotools
 
 DESCRIPTION="OrgaDoc is a program for generating and organizing documents"
 HOMEPAGE="https://www.gnu.org/software/orgadoc/"
-SRC_URI="http://ftpmirror.gnu.org/orgadoc/orgadoc-1.0.tar.xz"
+SRC_URI="http://ftpmirror.gnu.org/${PN}/${P}.tar.gz"
 RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="doc"
 
 DEPEND="
 	>=sys-devel/autoconf-2.69"
@@ -31,6 +31,5 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README
 
-	newman docs/orgadoc.man orgadoc.1
-	newman docs/orgadoc-init-readme.man orgadoc-init-readme.1
+	doman docs/orgadoc.1 docs/orgadoc-init-readme.1
 }
