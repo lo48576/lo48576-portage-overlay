@@ -145,6 +145,7 @@ src_compile() {
 src_install() {
 	emake PREFIX=${ED}usr install-resources
 	cargo_src_install
+	dodoc README.md
 }
 
 pkg_postinst() {

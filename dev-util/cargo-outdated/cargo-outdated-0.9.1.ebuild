@@ -157,4 +157,6 @@ RDEPEND=""
 
 src_install() {
 	cargo_src_install
+
+	dodoc CHANGELOG.md README.md
 }

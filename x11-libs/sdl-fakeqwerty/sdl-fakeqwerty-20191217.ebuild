@@ -24,6 +24,8 @@ DEPEND="
 	sdl? ( >=media-libs/libsdl-1.2[${MULTILIB_USEDEP}] )
 	sdl2? ( media-libs/libsdl2[${MULTILIB_USEDEP}] )"
 
+DOCS=( README.md background.md games )
+
 fakeqwerty_target() {
 	case "${MULTILIB_ABI_FLAG}" in
 		abi_x86_32)

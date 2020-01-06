@@ -42,3 +42,9 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+src_install() {
+	cargo_src_install
+
+	dodoc CHANGELOG.md FAQ.md README.rst
+}
