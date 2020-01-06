@@ -117,7 +117,7 @@ wincolor-1.0.1
 winres-0.1.8
 "
 
-inherit cargo
+inherit cargo gnome2-utils
 
 DESCRIPTION="GTK UI for neovim"
 HOMEPAGE="https://github.com/daa84/neovim-gtk"
