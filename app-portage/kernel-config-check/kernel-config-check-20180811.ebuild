@@ -20,7 +20,7 @@ IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
-	sys-apps/portage[${PYTHON_USEDEP}]"
+	sys-apps/portage"
 DEPEND="${RDEPEND}"
 
 src_install() {
