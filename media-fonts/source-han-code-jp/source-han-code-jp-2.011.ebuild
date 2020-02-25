@@ -7,7 +7,7 @@ inherit font
 
 DESCRIPTION="Derivative of Source Han Sans and Source Code Pro"
 HOMEPAGE="https://github.com/adobe-fonts/source-han-code-jp"
-SRC_URI="https://github.com/adobe-fonts/${PN}/archive/${PV}R.zip"
+SRC_URI="https://github.com/adobe-fonts/${PN}/archive/${PV}R.zip -> ${P}.zip"
 
 LICENSE="OFL-1.1"
 SLOT="0"

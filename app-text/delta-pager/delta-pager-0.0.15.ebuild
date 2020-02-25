@@ -95,7 +95,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 DESCRIPTION="A syntax-highlighting pager for git"
 HOMEPAGE="https://github.com/dandavison/delta"
-SRC_URI="https://github.com/dandavison/${MY_PN}/archive/${PV}.tar.gz -> ${PV}.tar.gz
+SRC_URI="https://github.com/dandavison/${MY_PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="MIT"
