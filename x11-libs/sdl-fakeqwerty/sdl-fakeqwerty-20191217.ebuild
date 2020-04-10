@@ -51,7 +51,7 @@ multilib_src_compile() {
 	local target="$(fakeqwerty_target)"
 	CFLAGS="${CFLAGS} $(get_abi_CFLAGS)"
 	if use sdl ; then
-		emake CFLAGS="${CFLAGS}$(pkg-config --cflags sdl)" "sdl1-hooks-${target}.so" "sdl1-peep-hooks-${target}.so" || die
+		emake CFLAGS="${CFLAGS} $(pkg-config --cflags sdl)" "sdl1-hooks-${target}.so" "sdl1-peep-hooks-${target}.so" || die
 	fi
 	if use sdl2 ; then
 		emake CFLAGS="${CFLAGS} $(pkg-config --cflags sdl2)" "sdl2-hooks-${target}.so" || die
