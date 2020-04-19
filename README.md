@@ -1,4 +1,4 @@
-# Larry-overlay
+# lo48576 overlay
 
 This is @lo48576's personal overlay.
 
