@@ -1,12 +1,12 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI="7"
 
-inherit font versionator
+inherit font
 
-MY_PV="$(get_version_component_range 3-)"
-MPLUS_VER="$(get_version_component_range 2)"
+MY_PV="$(ver_cut 3-)"
+MPLUS_VER="$(ver_cut 2)"
 S_DIR="8/8574"
 S_DIR_L="8/8572"
 S_DIR_X="8/8573"
