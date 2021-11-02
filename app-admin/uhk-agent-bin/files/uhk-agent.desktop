@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=UHK Agent
+Name[en_US]=UHK Agent
+GenericName=Ultimate Hacking Keyboard configurator
+Exec=uhk-agent
+Icon=uhk-agent
+Terminal=false
+Categories=Settings;HardwareSettings;
