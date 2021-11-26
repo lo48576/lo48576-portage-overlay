@@ -1,12 +1,11 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7,8,9} )
-DISTUTILS_USE_SETUPTOOLS=rdepend
+PYTHON_COMPAT=( python3_{7..10} )
 
-inherit distutils-r1
+inherit distutils-r1 optfeature
 
 DESCRIPTION="Network address representation and manipulation library"
 HOMEPAGE="https://github.com/drkjam/netaddr https://pypi.org/project/netaddr/ https://netaddr.readthedocs.org"
@@ -16,7 +15,7 @@ SRC_URI="https://github.com/netaddr/netaddr/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm arm64 ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm arm64 ~ppc64 ~riscv x86 ~amd64-linux ~x86-linux"
 IUSE="cli"
 
 RDEPEND="
@@ -40,4 +39,8 @@ src_install() {
 	if ! use cli ; then
 		rm -v "${D}"/usr/bin/netaddr || die
 	fi
+}
+
+pkg_postinst() {
+	optfeature "CLI support" dev-python/ipython
 }
