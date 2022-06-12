@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Joplin
+Name[en_US]=Joplin
+GenericName=Joplin note taking and to-do
+Exec=joplin
+Icon=joplin
+Terminal=false
+Categories=Utility;TextTools;
