@@ -8,14 +8,14 @@ inherit font
 
 DESCRIPTION="Mixing mplus and IPA fonts"
 HOMEPAGE="https://mix-mplus-ipa.osdn.jp/"
-SRC_URI="mirror://sourceforge.jp/mix-mplus-ipa/59021/migmix-1m-${MY_PV}.zip
-	mirror://sourceforge.jp/mix-mplus-ipa/59021/migmix-1p-${MY_PV}.zip
-	mirror://sourceforge.jp/mix-mplus-ipa/59021/migmix-2m-${MY_PV}.zip
-	mirror://sourceforge.jp/mix-mplus-ipa/59021/migmix-2p-${MY_PV}.zip
-	mirror://sourceforge.jp/mix-mplus-ipa/59022/migu-1p-${MY_PV}.zip
-	mirror://sourceforge.jp/mix-mplus-ipa/59022/migu-1c-${MY_PV}.zip
-	mirror://sourceforge.jp/mix-mplus-ipa/59022/migu-1m-${MY_PV}.zip
-	mirror://sourceforge.jp/mix-mplus-ipa/59022/migu-2m-${MY_PV}.zip"
+SRC_URI="mirror://sourceforge.jp/mix-mplus-ipa/72510/migmix-1m-${MY_PV}.zip
+	mirror://sourceforge.jp/mix-mplus-ipa/72510/migmix-1p-${MY_PV}.zip
+	mirror://sourceforge.jp/mix-mplus-ipa/72510/migmix-2m-${MY_PV}.zip
+	mirror://sourceforge.jp/mix-mplus-ipa/72510/migmix-2p-${MY_PV}.zip
+	mirror://sourceforge.jp/mix-mplus-ipa/72511/migu-1p-${MY_PV}.zip
+	mirror://sourceforge.jp/mix-mplus-ipa/72511/migu-1c-${MY_PV}.zip
+	mirror://sourceforge.jp/mix-mplus-ipa/72511/migu-1m-${MY_PV}.zip
+	mirror://sourceforge.jp/mix-mplus-ipa/72511/migu-2m-${MY_PV}.zip"
 S="${WORKDIR}"
 
 LICENSE="mplus-fonts IPAfont"
