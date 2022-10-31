@@ -23,9 +23,9 @@ S="${WORKDIR}/agent-${PV}"
 QA_PRESTRIPPED="usr/bin/uhk-agent"
 
 src_install() {
-	newbin ${DISTDIR}/${P}.AppImage uhk-agent
+	newbin "${DISTDIR}"/${P}.AppImage uhk-agent
 	udev_newrules rules/50-uhk60.rules 50-uhk60.rules
-	domenu ${FILESDIR}/uhk-agent.desktop
+	domenu "${FILESDIR}"/uhk-agent.desktop
 	newicon build/icons/1024x1024.png uhk-agent.png
 	newicon -s 512 build/icons/512x512.png uhk-agent.png
 	newicon -s 256 build/icons/256x256.png uhk-agent.png
