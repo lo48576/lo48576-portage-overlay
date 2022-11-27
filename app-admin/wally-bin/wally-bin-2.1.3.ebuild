@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
 RDEPEND="
-	net-libs/webkit-gtk
+	net-libs/webkit-gtk:4
 	virtual/libusb:1"
 
 S="${WORKDIR}/${MY_P}"
