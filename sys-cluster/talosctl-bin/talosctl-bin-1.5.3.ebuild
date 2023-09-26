@@ -22,5 +22,5 @@ S="${WORKDIR}"
 QA_PRESTRIPPED="usr/bin/talosctl"
 
 src_install() {
-	newbin ${DISTDIR}/${MY_PV}.bin ${MY_PN}
+	newbin "${DISTDIR}/${MY_PV}.bin" ${MY_PN}
 }
