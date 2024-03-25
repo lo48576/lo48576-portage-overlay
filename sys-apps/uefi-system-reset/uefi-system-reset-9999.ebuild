@@ -25,7 +25,7 @@ LICENSE="CC0-1.0"
 SLOT="0"
 IUSE="boot efi32 efi64"
 
-BEPEND="
+DEPEND="
 	efi32? ( sys-boot/gnu-efi[abi_x86_32] )
 	efi64? ( sys-boot/gnu-efi[abi_x86_64] )
 "
