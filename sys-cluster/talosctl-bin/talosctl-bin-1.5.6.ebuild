@@ -10,15 +10,11 @@ DESCRIPTION="Talos Linux is a modern Linux distribution built for Kubernetes"
 HOMEPAGE="https://www.talos.dev/"
 SRC_URI="https://github.com/siderolabs/talos/releases/download/v${PV}/${MY_PN}-linux-amd64 -> ${MY_PV}.bin"
 
+S="${WORKDIR}"
 LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
-
-S="${WORKDIR}"
 QA_PRESTRIPPED="usr/bin/talosctl"
 
 src_install() {
